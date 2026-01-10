@@ -20,9 +20,9 @@ export default function Blogs() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-blue-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white py-24 mt-16 overflow-hidden">
+      <section className="relative bg-linear-to-br from-gray-900 via-gray-800 to-blue-900 text-white py-24 mt-16 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
@@ -33,7 +33,7 @@ export default function Blogs() {
             <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
               📚 Knowledge Hub
             </span>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-6 bg-linear-to-r from-white to-blue-300 bg-clip-text text-transparent">
               Insights & Articles
             </h1>
             <p className="text-2xl text-gray-200 max-w-3xl mx-auto">
@@ -54,7 +54,7 @@ export default function Blogs() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg scale-105"
+                    ? "bg-linear-to-r from-blue-600 to-blue-500 text-white shadow-lg scale-105"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105"
                 }`}
               >
@@ -146,7 +146,7 @@ export default function Blogs() {
 
                   {/* Author */}
                   <div className="flex items-center gap-3 pt-4 border-t">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">
                       {blog.author.charAt(0)}
                     </div>
                     <div>
@@ -184,7 +184,7 @@ export default function Blogs() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-500">
+      <section className="py-16 bg-linear-to-r from-blue-600 to-blue-500">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Stay Updated with Industry Insights

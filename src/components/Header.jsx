@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { services } from "../data/services";
 import { categories } from "../data/products";
@@ -9,6 +9,7 @@ export default function Header() {
   const [galleriesOpen, setGalleriesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleServiceClick = (e, id) => {
     e.preventDefault();
@@ -21,8 +22,15 @@ export default function Header() {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     } else {
-      // Navigate to the page with hash
-      window.location.href = `/fabrication-services#${id}`;
+      // Navigate to the page with hash using React Router
+      navigate(`/fabrication-services#${id}`);
+      // Scroll to element after navigation
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
     }
   };
 

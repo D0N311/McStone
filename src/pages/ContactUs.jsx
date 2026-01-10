@@ -163,9 +163,9 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-red-900 text-white pt-32 pb-20">
+      <div className="relative bg-linear-to-r from-gray-900 via-gray-800 to-red-900 text-white pt-32 pb-20">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -186,7 +186,7 @@ export default function ContactUs() {
               key={index}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="bg-gradient-to-br from-red-500 to-red-600 w-16 h-16 rounded-lg flex items-center justify-center text-white mb-4">
+              <div className="bg-linear-to-br from-red-500 to-red-600 w-16 h-16 rounded-lg flex items-center justify-center text-white mb-4">
                 {getIcon(info.icon)}
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">
@@ -343,7 +343,7 @@ export default function ContactUs() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-red-800 transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="w-full bg-linear-to-r from-red-600 to-red-700 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-red-800 transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Send Message
               </button>
@@ -367,7 +367,7 @@ export default function ContactUs() {
             </div>
 
             {/* Why Contact Us */}
-            <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
+            <div className="bg-linear-to-br from-red-600 to-red-700 rounded-2xl shadow-xl p-6 sm:p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Why Choose McStone?</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -433,7 +433,7 @@ export default function ContactUs() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 py-16">
+      <div className="bg-linear-to-r from-gray-900 to-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Ready to Start Your Project?

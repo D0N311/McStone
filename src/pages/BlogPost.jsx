@@ -43,7 +43,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 text-white py-20 mt-16">
+      <section className="relative bg-linear-to-sbr from-gray-900 via-gray-800 to-blue-900 text-white py-20 mt-16">
         <div className="max-w-4xl mx-auto px-6">
           {/* Back Button */}
           <button
@@ -79,7 +79,7 @@ export default function BlogPost() {
           {/* Meta Info */}
           <div className="flex flex-wrap items-center gap-6 text-gray-300">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-12 h-12 rounded-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-lg">
                 {blog.author.charAt(0)}
               </div>
               <div>

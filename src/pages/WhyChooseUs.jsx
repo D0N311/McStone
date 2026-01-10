@@ -194,9 +194,9 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-red-50">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-red-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-red-900 text-white py-24 mt-16 overflow-hidden">
+      <section className="relative bg-linear-to-br from-gray-900 via-gray-800 to-red-900 text-white py-24 mt-16 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
@@ -205,7 +205,7 @@ export default function WhyChooseUs() {
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center">
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent animate-fade-in">
+            <h1 className="text-6xl font-bold mb-6 bg-linear-to-r from-white to-red-300 bg-clip-text text-transparent animate-fade-in">
               Why Choose Mc Stone
             </h1>
             <p className="text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
@@ -233,7 +233,7 @@ export default function WhyChooseUs() {
                   <div className="relative inline-block">
                     <div className="absolute inset-0 bg-red-500 rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
                     <div
-                      className={`text-6xl font-bold bg-gradient-to-br from-red-600 to-red-400 bg-clip-text text-transparent transition-all duration-500 transform group-hover:scale-110 ${
+                      className={`text-6xl font-bold bg-linear-to-br from-red-600 to-red-400 bg-clip-text text-transparent transition-all duration-500 transform group-hover:scale-110 ${
                         countersStarted ? "opacity-100" : "opacity-0"
                       }`}
                     >
@@ -279,9 +279,9 @@ export default function WhyChooseUs() {
                     : "border-transparent hover:shadow-xl"
                 }`}
               >
-                {/* Gradient overlay on hover */}
+                {/* linear overlay on hover */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-red-50 to-transparent rounded-2xl transition-opacity duration-500 ${
+                  className={`absolute inset-0 bg-linear-to-br from-red-50 to-transparent rounded-2xl transition-opacity duration-500 ${
                     hoveredCard === index ? "opacity-100" : "opacity-0"
                   }`}
                 ></div>
@@ -334,7 +334,7 @@ export default function WhyChooseUs() {
       </section>
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gradient-to-br from-white to-gray-50">
+      <section className="py-20 bg-linear-to-br from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 bg-green-100 text-green-600 rounded-full text-sm font-semibold mb-4">
@@ -399,7 +399,7 @@ export default function WhyChooseUs() {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-white to-gray-50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-blue-200 transform hover:-translate-y-2"
+                className="group relative bg-linear-to-br from-white to-gray-50 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-blue-200 transform hover:-translate-y-2"
               >
                 {/* Quote icon */}
                 <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -432,7 +432,7 @@ export default function WhyChooseUs() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4 border-t pt-6">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-xl font-bold group-hover:scale-110 transition-transform">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div>
@@ -451,7 +451,7 @@ export default function WhyChooseUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 text-white py-24 overflow-hidden">
+      <section className="relative bg-linear-to-br from-gray-900 via-red-900 to-gray-900 text-white py-24 overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-20 w-64 h-64 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
@@ -491,7 +491,7 @@ export default function WhyChooseUs() {
                   />
                 </svg>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </button>
             <button className="group px-10 py-5 bg-white text-gray-900 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2">
               Schedule Consultation

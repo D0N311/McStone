@@ -1,8 +1,8 @@
 import { services } from "../data/services";
-
+import CTA from "../components/CTA";
 export default function FabricationServices() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 pt-12">
       {/* Hero Section */}
       <section className="relative h-[350px] bg-gray-900">
         <div
@@ -13,7 +13,7 @@ export default function FabricationServices() {
             filter: "brightness(0.4)",
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/30"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-blue-900/50 to-purple-900/30"></div>
 
         <div className="relative h-full max-w-7xl mx-auto px-6 flex items-center">
           <div>
@@ -160,24 +160,7 @@ export default function FabricationServices() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Start Your Fabrication Project?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Contact our team today for a free consultation and quote.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
-              Get a Free Quote
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition">
-              Call (123) 456-7890
-            </button>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 }

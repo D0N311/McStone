@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { categories, products } from "../data/products";
-
+import CTA from "../components/CTA";
 export default function Galleries() {
   const [searchParams] = useSearchParams();
   const categoryFromUrl = searchParams.get("category") || "all";
@@ -19,7 +19,7 @@ export default function Galleries() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 mt-16">
+      <section className="bg-linear-to-r from-gray-900 to-gray-800 text-white py-20 mt-16">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl font-bold mb-4">Product Gallery</h1>
           <p className="text-xl text-gray-300 max-w-3xl">
@@ -121,20 +121,7 @@ export default function Galleries() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Don't See What You're Looking For?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We specialize in custom metal fabrication. Let us bring your unique
-            vision to life.
-          </p>
-          <button className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition">
-            Contact Us for Custom Work
-          </button>
-        </div>
-      </section>
+      <CTA />
     </div>
   );
 }

@@ -45,7 +45,7 @@ export default function About() {
             <img
               src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80"
               alt="Metal Fabrication"
-              className="rounded-lg shadow-2xl w-full h-[500px] object-cover"
+              className="rounded-lg shadow-2xl w-full h-125 object-cover"
             />
             <div className="absolute -bottom-6 -left-6 bg-red-600 text-white p-8 rounded-lg shadow-xl">
               <div className="text-3xl font-bold">Certified</div>

@@ -183,11 +183,11 @@ export default function Services() {
 
   return (
     <section className="relative z-10 mt-8 md:-mt-40 lg:-mt-35 mb-20">
-      <div className="max-w-[1400px] mx-auto px-6">
+      <div className="max-w-350 mx-auto px-6">
         {/* Desktop Layout */}
         <div className="hidden lg:flex gap-0 overflow-hidden shadow-2xl ">
           {/* First large card */}
-          <div className="bg-white p-10 lg:w-[350px] flex-shrink-0 rounded-tl-3xl rounded-bl-3xl">
+          <div className="bg-white p-10 lg:w-87.5 shrink-0 rounded-tl-3xl rounded-bl-3xl">
             <div className="flex flex-col h-full">
               <div className="mb-6 text-gray-300">{getIcon("gear")}</div>
 

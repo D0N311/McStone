@@ -27,20 +27,20 @@ export default function Hero() {
     },
   ];
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section className="relative h-screen bg-gray-900 pb-32">
+    <section className="relative pt-32 h-screen bg-gray-900 pb-32">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-all duration-500"
@@ -51,7 +51,7 @@ export default function Hero() {
       ></div>
 
       {/* Blue/Purple Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/30"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-blue-900/50 to-purple-900/30"></div>
 
       {/* Content */}
       <div className="relative h-full max-w-7xl mx-auto px-6 flex items-center">
