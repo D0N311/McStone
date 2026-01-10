@@ -1,20 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function Services() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
   const [activeProductIndex, setActiveProductIndex] = useState(1);
-
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -194,20 +181,8 @@ export default function Services() {
     }
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % services.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + services.length) % services.length);
-  };
-
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <section className="relative z-10 -mt-35">
+    <section className="relative z-10 mt-8 md:-mt-40 lg:-mt-35 mb-20">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Desktop Layout */}
         <div className="hidden lg:flex gap-0 overflow-hidden shadow-2xl ">
@@ -257,92 +232,32 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Mobile/Tablet Carousel */}
-        <div className="lg:hidden relative">
-          <div className="overflow-hidden rounded-t-3xl shadow-2xl">
+        {/* Mobile/Tablet Layout */}
+        <div className="lg:hidden space-y-0 shadow-2xl rounded-3xl overflow-hidden">
+          {services.map((service, index) => (
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              key={index}
+              className={`${service.bgColor} ${service.textColor} p-6 sm:p-8 md:p-10 border-b last:border-b-0 border-gray-200`}
             >
-              {services.map((service, index) => (
+              <div className="flex flex-col items-center text-center">
                 <div
-                  key={index}
-                  className={`${service.bgColor} ${service.textColor} p-10 w-full flex-shrink-0 min-h-[400px]`}
+                  className={`mb-4 sm:mb-6 ${
+                    service.bgColor === "bg-red-600"
+                      ? "text-white"
+                      : service.icon === "gear"
+                      ? "text-gray-300"
+                      : "text-gray-400"
+                  }`}
                 >
-                  <div className="flex flex-col h-full items-center text-center">
-                    <div
-                      className={`mb-6 ${
-                        service.bgColor === "bg-red-600"
-                          ? "text-white"
-                          : service.icon === "gear"
-                          ? "text-gray-300"
-                          : "text-gray-400"
-                      }`}
-                    >
-                      {getIcon(service.icon)}
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-auto">
-                      {service.title}
-                    </h3>
-                  </div>
+                  {getIcon(service.icon)}
                 </div>
-              ))}
+
+                <h3 className="text-xl sm:text-2xl font-bold">
+                  {service.title}
+                </h3>
+              </div>
             </div>
-          </div>
-
-          {/* Navigation Arrows */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-900 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition z-10"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-900 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition z-10"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
-            {services.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${
-                  index === currentSlide
-                    ? "bg-red-600 w-8"
-                    : "bg-gray-400 hover:bg-gray-600"
-                }`}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

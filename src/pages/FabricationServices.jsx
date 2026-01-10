@@ -2,7 +2,7 @@ import { services } from "../data/services";
 
 export default function FabricationServices() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 py-12">
       {/* Hero Section */}
       <section className="relative h-[350px] bg-gray-900">
         <div

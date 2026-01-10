@@ -32,18 +32,18 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-15 h-15 bg-white rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 md:w-15 md:h-15 bg-white rounded-full flex items-center justify-center">
               <img
                 src={Logo}
                 alt="Mc Stone Logo"
-                className="w-15 h-15 rounded-full"
+                className="w-10 h-10 md:w-15 md:h-15 rounded-full"
               />
             </div>
             <span className="text-white text-xl font-bold">McStone</span>
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             <Link
               to="/"
               className="text-white hover:text-red-500 transition border-b-2 border-red-500 pb-1"
@@ -156,11 +156,18 @@ export default function Header() {
             >
               Blogs
             </Link>
+
+            <Link
+              to="/contact-us"
+              className="text-white hover:text-red-500 transition"
+            >
+              Contact Us
+            </Link>
           </nav>
 
           {/* Call Button */}
           <div className="flex items-center gap-4">
-            <button className="hidden md:flex items-center gap-2 text-white hover:text-red-500 transition">
+            <button className="hidden lg:flex items-center gap-2 text-white hover:text-red-500 transition">
               <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
@@ -185,7 +192,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-white p-2"
+              className="lg:hidden text-white p-2"
             >
               <svg
                 className="w-6 h-6"
@@ -215,7 +222,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
+          <div className="lg:hidden mt-4 pb-4">
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
@@ -321,6 +328,14 @@ export default function Header() {
                 className="text-white hover:text-red-500 transition"
               >
                 Blogs
+              </Link>
+
+              <Link
+                to="/contact-us"
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-white hover:text-red-500 transition"
+              >
+                Contact Us
               </Link>
 
               <a
