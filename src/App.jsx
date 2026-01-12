@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import FabricationServices from "./pages/FabricationServices";
@@ -12,6 +13,7 @@ import NotFound from "./pages/404";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gray-50">
         <Header />
         <Routes>
